@@ -15,7 +15,16 @@ namespace SDM.Compulsory1.Domain.Services
 
         public int GetNumberOfReviewsFromReviewer(int reviewer)
         {
-            throw new System.NotImplementedException();
+            int numberOfReviews = 0;
+            foreach (var r in _repo.GetAll())
+            {
+                if (r.Reviewer == reviewer)
+                {
+                    numberOfReviews++;
+                }
+            }
+
+            return numberOfReviews;
         }
     }
 }

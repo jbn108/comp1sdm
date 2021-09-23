@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Moq;
 using SDM.Compulsory1.Core.Models;
 using SDM.Compulsory1.Domain.IRepositories;
@@ -15,10 +16,29 @@ namespace TestProductionCodeXunit
         [Fact]
         public void TestForNumberOfReviews()
         {
-            IReviewRepository reviewRepository = new ReviewRepository();
-            ReviewService reviewService = new ReviewService(reviewRepository);
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
 
-            int numberOfReviews = 0;
+            Review[] returnValue = { 
+                new Review() { Reviewer = 1, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
+                new Review() { Reviewer = 1, Grade = 2, Movie = 2, ReviewDate = DateTime.Now},
+                new Review() { Reviewer = 1, Grade = 2, Movie = 3, ReviewDate = DateTime.Now},
+                new Review() { Reviewer = 1, Grade = 2, Movie = 4, ReviewDate = DateTime.Now},
+                new Review() { Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
+                new Review() { Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
+                new Review() { Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            //Act
+            int actualResult = mService.GetNumberOfReviewsFromReviewer(1);
+
+            //Assert
+            m.Verify(m => m.GetAll(), Times.Once);
+
+            Assert.True(actualResult == returnValue.Length);
 
         }
     }
