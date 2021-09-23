@@ -1,0 +1,12 @@
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/bin/Debug/net5.0/SDM.Compulsory1.Core.deps.json
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/bin/Debug/net5.0/SDM.Compulsory1.Core.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/bin/Debug/net5.0/ref/SDM.Compulsory1.Core.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/bin/Debug/net5.0/SDM.Compulsory1.Core.pdb
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.csprojAssemblyReference.cache
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.AssemblyInfoInputs.cache
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.AssemblyInfo.cs
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.csproj.CoreCompileInputs.cache
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/ref/SDM.Compulsory1.Core.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.pdb

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SDM.Compulsory1.Domain/1.0.0": {
+        "dependencies": {
+          "SDM.Compulsory1.Core": "1.0.0"
+        },
+        "runtime": {
+          "SDM.Compulsory1.Domain.dll": {}
+        }
+      },
+      "SDM.Compulsory1.Core/1.0.0": {
+        "runtime": {
+          "SDM.Compulsory1.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SDM.Compulsory1.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SDM.Compulsory1.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

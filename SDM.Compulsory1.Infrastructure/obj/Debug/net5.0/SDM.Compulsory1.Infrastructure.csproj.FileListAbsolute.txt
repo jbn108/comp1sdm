@@ -1,0 +1,17 @@
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Infrastructure.deps.json
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Infrastructure.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/ref/SDM.Compulsory1.Infrastructure.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Infrastructure.pdb
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Core.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Core.pdb
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.csprojAssemblyReference.cache
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.AssemblyInfoInputs.cache
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.AssemblyInfo.cs
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.csproj.CoreCompileInputs.cache
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.csproj.CopyComplete
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/ref/SDM.Compulsory1.Infrastructure.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.pdb

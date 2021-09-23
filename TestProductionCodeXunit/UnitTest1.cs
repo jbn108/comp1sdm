@@ -24,6 +24,47 @@ namespace TestProductionCodeXunit
         }
         
         [Fact]
+        public void TestForTopNMoviesBasedOnAverageRating()
+        {
+            Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
+
+            ReviewService mService = new ReviewService(mock.Object);
+
+            Review[] returnValue = { new Review {Movie = 1, Grade = 5},
+                new Review {Movie = 1, Grade = 5},
+                new Review {Movie = 1, Grade = 5},
+                new Review {Movie = 1, Grade = 5},
+                new Review {Movie = 1, Grade = 5},
+                new Review {Movie = 2, Grade = 5},
+                new Review {Movie = 2, Grade = 4},
+                new Review {Movie = 3, Grade = 3},
+                new Review {Movie = 3, Grade = 3},
+                new Review {Movie = 4, Grade = 2},
+                new Review {Movie = 4, Grade = 2},
+                new Review {Movie = 5, Grade = 2},
+                new Review {Movie = 5, Grade = 1},
+                new Review {Movie = 5, Grade = 1},
+                new Review {Movie = 6, Grade = 1},
+                new Review {Movie = 6, Grade = 1}
+            };
+
+            mock.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            List<int> actualResult = mService.GetTopRatedMovies(5);
+
+            mock.Verify(m => m.GetAll(), Times.Once);
+            
+            Assert.Collection(actualResult,
+                item => Assert.Equal(1, item),
+                item => Assert.Equal(2, item),
+                item => Assert.Equal(3, item),
+                item => Assert.Equal(4,item),
+                item => Assert.Equal(5, item)
+            );
+        }
+        
+        
+        [Fact]
         public void TestForTopMovieByReviewer()
         {
             Mock<IReviewRepository> mock = new Mock<IReviewRepository>();

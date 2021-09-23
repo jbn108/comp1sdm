@@ -39,17 +39,17 @@ namespace SDM.Compulsory1.Core.IServices
  
     // 9. On input N, what is top N of movies? The score of a movie is its average rate. 
  
-    // List<int> GetTopRatedMovies(int amount); 
+    List<int> GetTopRatedMovies(int amount); 
  
     // 10. On input N, what are the movies that reviewer N has reviewed? The list should 
     // be sorted decreasing by rate first, and date secondly. 
  
-    // List<int> GetTopMoviesByReviewer(int reviewer); 
+    List<int> GetTopMoviesByReviewer(int reviewer); 
  
     // 11. On input N, who are the reviewers that have reviewed movie N? The list 
     // should be sorted decreasing by rate first, and date secondly. 
  
-    // List<int> GetReviewersByMovie(int movie);
+    List<int> GetReviewersByMovie(int movie);
         
     }
 }

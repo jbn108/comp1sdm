@@ -1,0 +1,15 @@
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/bin/Debug/net5.0/SDM.Compulsory1.Domain.deps.json
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/bin/Debug/net5.0/ref/SDM.Compulsory1.Domain.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/bin/Debug/net5.0/SDM.Compulsory1.Core.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/bin/Debug/net5.0/SDM.Compulsory1.Core.pdb
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.csprojAssemblyReference.cache
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.AssemblyInfoInputs.cache
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.AssemblyInfo.cs
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.csproj.CoreCompileInputs.cache
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.csproj.CopyComplete
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/ref/SDM.Compulsory1.Domain.dll
+/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.pdb
