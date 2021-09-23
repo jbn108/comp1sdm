@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jonasbuus/RiderProjects/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj": {}
+    "/home/franno/Github/jbn108/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj": {}
   },
   "projects": {
-    "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj": {
+    "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj",
+        "projectUniqueName": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj",
         "projectName": "SDM.Compulsory1.Core",
-        "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj",
-        "packagesPath": "/Users/jonasbuus/.nuget/packages/",
-        "outputPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Core/obj/",
+        "projectPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj",
+        "packagesPath": "/home/franno/.nuget/packages/",
+        "outputPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jonasbuus/.nuget/NuGet/NuGet.Config"
+          "/home/franno/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -52,21 +52,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.205/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj": {
+    "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj",
+        "projectUniqueName": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj",
         "projectName": "SDM.Compulsory1.Domain",
-        "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj",
-        "packagesPath": "/Users/jonasbuus/.nuget/packages/",
-        "outputPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/obj/",
+        "projectPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj",
+        "packagesPath": "/home/franno/.nuget/packages/",
+        "outputPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jonasbuus/.nuget/NuGet/NuGet.Config"
+          "/home/franno/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -78,8 +78,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj": {
-                "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj"
+              "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj": {
+                "projectPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj"
               }
             }
           }
@@ -108,21 +108,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.205/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj": {
+    "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj",
+        "projectUniqueName": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj",
         "projectName": "SDM.Compulsory1.Infrastructure",
-        "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj",
-        "packagesPath": "/Users/jonasbuus/.nuget/packages/",
-        "outputPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/obj/",
+        "projectPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj",
+        "packagesPath": "/home/franno/.nuget/packages/",
+        "outputPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jonasbuus/.nuget/NuGet/NuGet.Config"
+          "/home/franno/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -134,8 +134,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj": {
-                "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj"
+              "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj": {
+                "projectPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj"
               }
             }
           }
@@ -164,21 +164,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.205/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/jonasbuus/RiderProjects/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj": {
+    "/home/franno/Github/jbn108/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonasbuus/RiderProjects/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
+        "projectUniqueName": "/home/franno/Github/jbn108/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
         "projectName": "TestProductionCodeXunit",
-        "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
-        "packagesPath": "/Users/jonasbuus/.nuget/packages/",
-        "outputPath": "/Users/jonasbuus/RiderProjects/comp1sdm/TestProductionCodeXunit/obj/",
+        "projectPath": "/home/franno/Github/jbn108/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
+        "packagesPath": "/home/franno/.nuget/packages/",
+        "outputPath": "/home/franno/Github/jbn108/comp1sdm/TestProductionCodeXunit/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jonasbuus/.nuget/NuGet/NuGet.Config"
+          "/home/franno/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -190,11 +190,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj": {
-                "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj"
+              "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj": {
+                "projectPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj"
               },
-              "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj": {
-                "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj"
+              "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj": {
+                "projectPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj"
               }
             }
           }
@@ -249,7 +249,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.205/RuntimeIdentifierGraph.json"
         }
       }
     }

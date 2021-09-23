@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5XLnwZ+w5xm+m5G/o8PHP2I2x3bkpgniHcM32Tw8n6+JJ4Il0YHvaIg2I0NfWimJepIiM7pt4m631STCLGv3xA==",
+  "dgSpecHash": "3Y9YCsJDapTyp1oo9kJI5/bTCvtUERrk4EMiM98sKLZT+kdzSthAB7+vxdGSkPYxI0BjmQQfg+HGuZYB/oC+/A==",
   "success": true,
-  "projectFilePath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj",
+  "projectFilePath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
