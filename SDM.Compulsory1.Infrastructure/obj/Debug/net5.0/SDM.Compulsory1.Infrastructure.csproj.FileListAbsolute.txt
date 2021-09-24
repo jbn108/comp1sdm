@@ -1,0 +1,17 @@
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Infrastructure.deps.json
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Infrastructure.dll
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/ref/SDM.Compulsory1.Infrastructure.dll
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Infrastructure.pdb
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Core.dll
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Core.pdb
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.csproj.AssemblyReference.cache
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.AssemblyInfoInputs.cache
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.AssemblyInfo.cs
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.csproj.CopyComplete
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.dll
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/ref/SDM.Compulsory1.Infrastructure.dll
+/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.pdb
