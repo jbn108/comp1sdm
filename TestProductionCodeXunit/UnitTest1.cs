@@ -408,13 +408,13 @@ namespace TestProductionCodeXunit
 
             Review[] returnValue =
             {
+                new Review() {Reviewer = 2, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
                 new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
                 new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
                 new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
                 new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
-                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
-                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
-                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+                new Review() {Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now}
             };
             m.Setup(m => m.GetAll()).Returns(() => returnValue);
 
@@ -426,7 +426,36 @@ namespace TestProductionCodeXunit
             //Assert
             m.Verify(m => m.GetAll(), Times.Once);
 
-            Assert.True(actualResult == 7);
+            Assert.True(actualResult == 4);
+        }
+        
+        [Fact]
+        public void GetNumberOfReviewsNoReviews()
+        {
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            //Act
+            double actualResult = mService.GetNumberOfReviews(6);
+
+            //Assert
+            m.Verify(m => m.GetAll(), Times.Once);
+
+            Assert.True(actualResult == 0);
         }
         
         [Fact]
