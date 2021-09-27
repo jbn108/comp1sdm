@@ -19,11 +19,6 @@ namespace SDM.Compulsory1.Domain.Services
 
         public int GetNumberOfReviewsFromReviewer(int reviewer)
         {
-            
-            if (reviewer < 1)
-            {
-                throw new ArgumentException("Invalid input!");
-            }
             int numberOfReviews = 0;
             foreach (var r in _repo.GetAll())
             {
@@ -33,7 +28,7 @@ namespace SDM.Compulsory1.Domain.Services
                 }
             }
 
-            return numberOfReviews == 0 ? throw new ArgumentException("No Reviewer with that ID exist in the database!") : numberOfReviews;
+            return numberOfReviews;
         }
 
         public double GetAverageRateFromReviewer(int reviewer)
@@ -135,6 +130,16 @@ namespace SDM.Compulsory1.Domain.Services
         public List<int> GetTopRatedMovies(int amount)
             {
                 var allReviews = _repo.GetAll().ToList();
+                if (amount < 1)
+                {
+                    throw new ArgumentException("Param needs to be 1 or above.");
+                }
+
+                if (amount > allReviews.Count)
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+                
                 var movieRatingsDictionary = new Dictionary<int, List<int>>();
                 var movieTotalRatingDictionary = new Dictionary<int, int>();
 
@@ -187,7 +192,12 @@ namespace SDM.Compulsory1.Domain.Services
 
             public List<int> GetTopMoviesByReviewer(int reviewer)
             {
-                List<Review> movies = _repo.GetAll().ToList().FindAll(r => r.Reviewer == reviewer);
+                var repo = _repo.GetAll().ToList();
+                if (repo.Find(r => r.Reviewer == reviewer) == null)
+                {
+                    throw new ArgumentException("Reviewer With id does not exist");
+                }
+                List<Review> movies = repo.FindAll(r => r.Reviewer == reviewer);
 
                 var orderedMovies = movies.OrderByDescending(m => m.Grade).ThenByDescending(m => m.ReviewDate).ToList();
 
@@ -202,22 +212,24 @@ namespace SDM.Compulsory1.Domain.Services
 
             public List<int> GetReviewersByMovie(int movie)
             {
-                List<int> reviewers = new List<int>();
-
-                foreach (var r in _repo.GetAll().ToList().FindAll(r => r.Movie == movie))
+                var repo = _repo.GetAll().ToList();
+                if (repo.Find(r => r.Movie == movie) == null)
                 {
-                    reviewers.Add(r.Reviewer);
+                    throw new ArgumentException("Movie With id does not exist");
                 }
 
-                return reviewers;
+                List<Review> reviewers = repo.FindAll(r => r.Movie == movie);
 
+                var orderedReviewers = reviewers.OrderByDescending(r => r.Grade).ThenByDescending(r => r.ReviewDate);
+
+                List<int> reviewerIds = new List<int>();
+                foreach (var r in orderedReviewers)
+                {
+                    reviewerIds.Add(r.Reviewer);
+                }
+
+                return reviewerIds;
             }
-
-
-
-
-
-            
         }
     }
 
