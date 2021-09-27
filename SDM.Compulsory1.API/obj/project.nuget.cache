@@ -1,15 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "2leaK0zhfqZt+U5bGhu/HJo0U/MU5shx+/UrMFJCuqxtufwyS3oIR2Y0L8ULt/vQp+sPJBhCVm0yegrtCWu1MA==",
-  "success": true,
-  "projectFilePath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
+  "dgSpecHash": "Moi4pSWhGdyeJYx/DVh1naNRmULQjRlcTXlLm/HLQYOwDzis1OoEQV3Q0WK76qK7AObM0iqIt0zdsPLGvm+Ayg==",
+  "success": false,
+  "projectFilePath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
   "expectedPackageFiles": [
-    "/Users/jonasbuus/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "/Users/jonasbuus/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
-    "/Users/jonasbuus/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "/Users/jonasbuus/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "/Users/jonasbuus/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "/Users/jonasbuus/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+    "/home/franno/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/franno/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/franno/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/home/franno/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/home/franno/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/home/franno/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.NETCore.App.Host.arch-x64. No packages exist with this id in source(s): nuget.org",
+      "libraryId": "Microsoft.NETCore.App.Host.arch-x64",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

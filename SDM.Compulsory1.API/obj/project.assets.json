@@ -193,19 +193,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/jonasbuus/.nuget/packages/": {}
+    "/home/franno/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
+      "projectUniqueName": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
       "projectName": "SDM.Compulsory1.API",
-      "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
-      "packagesPath": "/Users/jonasbuus/.nuget/packages/",
-      "outputPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.API/obj/",
+      "projectPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
+      "packagesPath": "/home/franno/.nuget/packages/",
+      "outputPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/jonasbuus/.nuget/NuGet/NuGet.Config"
+        "/home/franno/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -244,6 +244,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.arch-x64",
+            "version": "[5.0.8, 5.0.8]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -252,8 +258,19 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.205/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.NETCore.App.Host.arch-x64. No packages exist with this id in source(s): nuget.org",
+      "libraryId": "Microsoft.NETCore.App.Host.arch-x64",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }
