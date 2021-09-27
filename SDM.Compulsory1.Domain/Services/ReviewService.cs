@@ -86,6 +86,10 @@ namespace SDM.Compulsory1.Domain.Services
 
         public int GetNumberOfReviews(int movie)
         {
+            if (movie < 1)
+            {
+                throw new ArgumentException("Invalid input!");
+            }
             return _repo.GetAll().Where(r => r.Movie == movie).ToList().Count;
         }
 

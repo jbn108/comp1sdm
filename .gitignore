@@ -407,3 +407,18 @@ ASALocalRun/
 .localhistory/
 
 .idea/.idea.SDM.Compulsory1/.idea/workspace.xml
+TestProductionCodeXunit/obj/Debug/net5.0/TestProductionCodeXunit.pdb
+TestProductionCodeXunit/obj/Debug/net5.0/TestProductionCodeXunit.dll
+TestProductionCodeXunit/obj/Debug/net5.0/TestProductionCodeXunit.csproj.AssemblyReference.cache
+TestProductionCodeXunit/obj/Debug/net5.0/ref/TestProductionCodeXunit.dll
+TestProductionCodeXunit/bin/Debug/net5.0/TestProductionCodeXunit.pdb
+TestProductionCodeXunit/bin/Debug/net5.0/TestProductionCodeXunit.dll
+TestProductionCodeXunit/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb
+TestProductionCodeXunit/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll
+TestProductionCodeXunit/bin/Debug/net5.0/ref/TestProductionCodeXunit.dll
+SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb
+SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll
+SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.pdb
+SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.dll
+SDM.Compulsory1.Domain/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb
+SDM.Compulsory1.Domain/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll
