@@ -490,22 +490,148 @@ namespace TestProductionCodeXunit
             
             Assert.True(actualResult == 7);
         }
-        
         // GetMoviesWithHighestNumberOfTopRates
-        
-        [Fact]
-        public void GetMoviesWithHighestNumberOfTopRates()
+
+        [Theory]
+
+        //Reviewer, Grade, Movie
+        [InlineData(
+            1, 2, 3,
+            4, 5, 6,
+            7, 8, 9,
+        new int[] { 6 })]
+        [InlineData(
+            9, 8, 7,
+            6, 5, 4,
+            3, 2, 1,
+        new int[] { 4 })]
+        [InlineData(
+            5, 5, 5,
+            5, 5, 5,
+            5, 5, 5,
+        new int[] { 5 })]
+        [InlineData(
+            0, 0, 0,
+            0, 0, 0,
+            0, 0, 0,
+        new int[] { })]
+        [InlineData(
+            5, 5, 3,
+            5, 5, 5,
+            5, 5, 6,
+        new int[] { 3, 5, 6 })]
+        public void GetMoviesWithHighestNumberOfTopRates(
+        int a, int b, int c,
+        int a1, int b1, int c1,
+        int a2, int b2, int c2,
+        int[] expectedResult)
         {
-            throw new System.NotImplementedException();
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = a, Grade = b, Movie = c, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = a1, Grade = b1, Movie = c1, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = a2, Grade = b2, Movie = c2, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            // Check that the method returns a list
+            Assert.IsType<List<int>>(mService.GetMoviesWithHighestNumberOfTopRates());
+
+
+            //Check that it returns the expected result
+            List<int> expResult = new List<int>();
+            foreach (var i in expectedResult)
+                expResult.Add(i);
+            Assert.Equal(mService.GetMoviesWithHighestNumberOfTopRates(), expResult);
         }
 
         // GetMostProductiveReviewers
 
-        [Fact]
-        public void GetMostProductiveReviewers()
+        [Theory]
+
+        //Reviewer, Grade, Movie
+        [InlineData(
+            1, 2, 3,
+            4, 5, 6,
+            7, 2, 9,
+        new int[] { 1, 4, 7 })]
+        [InlineData(
+            9, 2, 7,
+            6, 5, 4,
+            3, 2, 1,
+        new int[] { 9, 6, 3 })]
+        [InlineData(
+            5, 5, 5,
+            5, 5, 5,
+            5, 5, 5,
+        new int[] { 5 })]
+        [InlineData(
+            0, 0, 0,
+            0, 0, 0,
+            0, 0, 0,
+        new int[] { 0 })]
+        [InlineData(
+            5, 5, 3,
+            5, 5, 5,
+            5, 5, 6,
+        new int[] { 5 })]
+        public void GetMostProductiveReviewers(
+            int a, int b, int c,
+            int a1, int b1, int c1,
+            int a2, int b2, int c2,
+            int[] expectedResult
+        )
         {
 
-            throw new System.NotImplementedException();
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = a, Grade = b, Movie = c, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = a1, Grade = b1, Movie = c1, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = a2, Grade = b2, Movie = c2, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+
+            ReviewService mService = new ReviewService(m.Object);
+
+
+            // Check that the method returns a list
+            Assert.IsType<List<int>>(mService.GetMostProductiveReviewers());
+
+
+            //Check that it returns the expected result
+            List<int> expResult = new List<int>();
+            foreach (var i in expectedResult)
+                expResult.Add(i);
+            Assert.Equal(mService.GetMostProductiveReviewers(), expResult);
+        }
+
+        [Fact]
+        public void GetMostProductiveReviewersButIsEmptyTest()
+        {
+
+
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+            Review[] returnValue =
+            {
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+
+            ReviewService mService = new ReviewService(m.Object);
+
+
+            // Should throw an exception since the list of reviewers is empty.
+            Assert.Throws<InvalidOperationException>(() => mService.GetMostProductiveReviewers());
+
         }
         
         [Fact]

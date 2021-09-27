@@ -119,7 +119,13 @@ namespace SDM.Compulsory1.Domain.Services
 
         public List<int> GetMoviesWithHighestNumberOfTopRates()
         {
-            throw new System.NotImplementedException();
+            List<int> topRatedMovies = new List<int>();
+            foreach (var r in _repo.GetAll())
+            {
+                if (r.Grade == 5 && !topRatedMovies.Contains(r.Movie))
+                    topRatedMovies.Add(r.Movie);
+            }
+            return topRatedMovies;
         }
 
 
@@ -141,12 +147,13 @@ namespace SDM.Compulsory1.Domain.Services
 
             List<KeyValuePair<int, int>> revs = topReviewers.OrderByDescending(r => r.Value).ToList();
             List<int> final = new List<int>();
-
-            final.Add(revs[0].Key);
-            final.Add(revs[1].Key);
-            final.Add(revs[2].Key);
-            final.Add(revs[3].Key);
-            final.Add(revs[4].Key);
+            int v = 5 < topReviewers.Keys.Count ? 5 : topReviewers.Keys.Count;
+            for (int i = 0; i < v; i++)
+            {
+                final.Add(revs[i].Key);
+            }
+            if(final.Count<=0)
+                throw new System.InvalidOperationException("There is less than 1 reviewer!");
 
             return final;
         }
