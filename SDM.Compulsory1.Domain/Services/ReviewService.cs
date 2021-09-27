@@ -123,10 +123,10 @@ namespace SDM.Compulsory1.Domain.Services
             final.Add(revs[4].Key);
 
             return final;
+        }
 
 
-
-            public List<int> GetTopRatedMovies(int amount)
+        public List<int> GetTopRatedMovies(int amount)
             {
                 var allReviews = _repo.GetAll().ToList();
                 var movieRatingsDictionary = new Dictionary<int, List<int>>();
@@ -211,21 +211,8 @@ namespace SDM.Compulsory1.Domain.Services
 
 
 
-            public List<int> GetTopRatedMovies(int amount)
-            {
-                throw new System.NotImplementedException();
-            }
-
-            public List<int> GetTopMoviesByReviewer(int reviewer)
-            {
-                throw new System.NotImplementedException();
-            }
-
-            public List<int> GetReviewersByMovie(int movie)
-            {
-                throw new System.NotImplementedException();
-            }
+            
         }
     }
-}
+
 

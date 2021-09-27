@@ -27,7 +27,7 @@ namespace TestProductionCodeXunit
                 new Review() {Reviewer = 1, Grade = 2, Movie = 4, ReviewDate = DateTime.Now},
                 new Review() {Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
                 new Review() {Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
-                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+                new Review() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
             };
             m.Setup(m => m.GetAll()).Returns(() => returnValue);
 
@@ -39,7 +39,7 @@ namespace TestProductionCodeXunit
             //Assert
             m.Verify(m => m.GetAll(), Times.Once);
 
-            Assert.True(actualResult == returnValue.Length);
+            Assert.True(actualResult == 6);
 
         }
 
