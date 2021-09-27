@@ -191,6 +191,65 @@ namespace TestProductionCodeXunit
 
             Assert.True(actualResult == 3);
         }
+        
+        [Fact]
+        public void TestForNegativeReviewIdForMethodTwo()
+        {
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = 2, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 2, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 3, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 4, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            //Act
+            var result = 
+                Assert.Throws<ArgumentException>(() => mService.GetAverageRateFromReviewer(-5));
+
+            //Assert
+            Assert.Equal("Invalid input!", result.Message);
+            
+        }
+        
+        [Fact]
+        public void TestForInvalidReviewerIdForMethodTwo()
+        {
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = 2, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 2, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 3, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 4, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            //Act
+            var result = 
+                Assert.Throws<ArgumentException>(() => mService.GetAverageRateFromReviewer(9999));
+
+            //Assert
+            m.Verify(m => m.GetAll(), Times.Once);
+            Assert.Equal("No Reviewer with that ID exist in the database!", result.Message);
+            
+        }
 
         // GetNumberOfRatesByReviewer
 
@@ -202,13 +261,13 @@ namespace TestProductionCodeXunit
 
             Review[] returnValue =
             {
-                new Review() {Reviewer = 1, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
                 new Review() {Reviewer = 1, Grade = 2, Movie = 2, ReviewDate = DateTime.Now},
                 new Review() {Reviewer = 1, Grade = 2, Movie = 3, ReviewDate = DateTime.Now},
-                new Review() {Reviewer = 1, Grade = 2, Movie = 4, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 4, ReviewDate = DateTime.Now},
                 new Review() {Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
                 new Review() {Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
-                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+                new Review() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
             };
             m.Setup(m => m.GetAll()).Returns(() => returnValue);
 
@@ -220,9 +279,124 @@ namespace TestProductionCodeXunit
             //Assert
             m.Verify(m => m.GetAll(), Times.Once);
 
-            Assert.True(actualResult == 7);
+            Assert.True(actualResult == 4);
         }
         
+        [Fact]
+        public void TestForNumberOfRatesFromReviewerNoRatingCase()
+        {
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = 2, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 2, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 3, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 4, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            //Act
+            double actualResult = mService.GetNumberOfRatesByReviewer(1, 5);
+
+            //Assert
+            m.Verify(m => m.GetAll(), Times.Once);
+
+            Assert.True(actualResult == 0);
+        }
+        
+        [Fact]
+        public void TestForNumberOfRatesFromReviewerNegativeReviewId()
+        {
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = 2, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 2, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 3, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 4, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            //Act
+            var result = 
+                Assert.Throws<ArgumentException>(() => mService.GetNumberOfRatesByReviewer(-5, 2));
+
+            //Assert
+            Assert.Equal("Invalid input!", result.Message);
+            
+        }
+        
+        [Fact]
+        public void TestForNumberOfRatesFromReviewerInvalidRateLOW()
+        {
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = 2, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 2, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 3, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 4, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            //Act
+            var result = 
+                Assert.Throws<ArgumentException>(() => mService.GetNumberOfRatesByReviewer(1, -5));
+
+            //Assert
+            Assert.Equal("Invalid input!", result.Message);
+            
+        }
+        
+        [Fact]
+        public void TestForNumberOfRatesFromReviewerInvalidRateHIGH()
+        {
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = 2, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 2, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 3, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 4, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            //Act
+            var result = 
+                Assert.Throws<ArgumentException>(() => mService.GetNumberOfRatesByReviewer(1, 8));
+
+            //Assert
+            Assert.Equal("Invalid input!", result.Message);
+            
+        }
         
         // GetNumberOfReviews
         

@@ -38,10 +38,21 @@ namespace SDM.Compulsory1.Domain.Services
 
         public double GetAverageRateFromReviewer(int reviewer)
         {
+            if (reviewer < 1)
+            {
+                throw new ArgumentException("Invalid input!");
+            }
             int sum = 0;
             int numberOfReviews = 0;
 
-            foreach (var r in _repo.GetAll().Where(r => r.Reviewer == reviewer).ToList())
+            var userRatings = _repo.GetAll().Where(r => r.Reviewer == reviewer).ToList();
+
+            if (userRatings.Count == 0)
+            {
+                throw new ArgumentException("No Reviewer with that ID exist in the database!");
+            }
+
+            foreach (var r in userRatings)
             {
                 sum += r.Grade;
                 numberOfReviews++;
@@ -52,6 +63,11 @@ namespace SDM.Compulsory1.Domain.Services
 
         public int GetNumberOfRatesByReviewer(int reviewer, int rate)
         {
+            if (reviewer < 1 || rate < 1 || rate > 5)
+            {
+                throw new ArgumentException("Invalid input!");
+            }
+            
             int numberOfRates = 0;
             foreach (var r in _repo.GetAll().Where(r => r.Reviewer == reviewer))
             {
