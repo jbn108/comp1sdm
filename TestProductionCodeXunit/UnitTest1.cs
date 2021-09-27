@@ -428,6 +428,34 @@ namespace TestProductionCodeXunit
 
             Assert.True(actualResult == 7);
         }
+        
+        [Fact]
+        public void GetNumberOfReviewsInvalidMovieId()
+        {
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            //Act
+            var result = 
+                Assert.Throws<ArgumentException>(() => mService.GetNumberOfReviews(-5));
+
+            //Assert
+            Assert.Equal("Invalid input!", result.Message);
+        }
 
         // GetAverageRateOfMovie
         

@@ -5,9 +5,8 @@
     <projectFile profileName="SDM.Compulsory1.API">SDM.Compulsory1.API/SDM.Compulsory1.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b317014d-c0c5-4954-9b4a-b87fae92fa44" name="Changes" comment="method 1 test done">
-      <change beforePath="$PROJECT_DIR$/SDM.Compulsory1.Domain/Services/ReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SDM.Compulsory1.Domain/Services/ReviewService.cs" afterDir="false" />
-    </list>
+    <list default="true" id="b317014d-c0c5-4954-9b4a-b87fae92fa44" name="Changes" comment="method 1 test done" />
+    <list id="1ee8bc24-d7df-4430-b935-fc749afc8891" name="Changesignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +16,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/Services/ReviewService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/Services/ReviewService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/Services/ReviewService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -73,12 +73,13 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b317014d-c0c5-4954-9b4a-b87fae92fa44" name="Changes" comment="" />
+      <changelist id="1ee8bc24-d7df-4430-b935-fc749afc8891" name="Changesignore" comment="" />
       <created>1632392537194</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632392537194</updated>
       <workItem from="1632392544969" duration="5799000" />
-      <workItem from="1632726525621" duration="7219000" />
+      <workItem from="1632726525621" duration="7528000" />
     </task>
     <task id="LOCAL-00001" summary="method 1, test 1">
       <created>1632394085952</created>
