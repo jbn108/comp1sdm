@@ -605,6 +605,75 @@ namespace TestProductionCodeXunit
             );
         }
         
+        [Fact]
+        public void TestForTopNMoviesBasedOnAverageRatingWithLessThan1N()
+        {
+            Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
+
+            ReviewService mService = new ReviewService(mock.Object);
+
+            Review[] returnValue =
+            {
+                new Review { Movie = 1, Grade = 5 },
+                new Review { Movie = 1, Grade = 5 },
+                new Review { Movie = 1, Grade = 5 },
+                new Review { Movie = 1, Grade = 5 },
+                new Review { Movie = 1, Grade = 5 },
+                new Review { Movie = 2, Grade = 5 },
+                new Review { Movie = 2, Grade = 4 },
+                new Review { Movie = 3, Grade = 3 },
+                new Review { Movie = 3, Grade = 3 },
+                new Review { Movie = 4, Grade = 2 },
+                new Review { Movie = 4, Grade = 2 },
+                new Review { Movie = 5, Grade = 2 },
+                new Review { Movie = 5, Grade = 1 },
+                new Review { Movie = 5, Grade = 1 },
+                new Review { Movie = 6, Grade = 1 },
+                new Review { Movie = 6, Grade = 1 }
+            };
+
+            mock.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            var ex = Assert.Throws<ArgumentException>(() => mService.GetTopRatedMovies(0));
+
+            Assert.Equal("Param needs to be 1 or above.", ex.Message);
+        }
+
+        [Fact]
+        public void TestForTopNMoviesBasedOnAverageRatingWithAboveUpperBound()
+        {
+            Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
+
+            ReviewService mService = new ReviewService(mock.Object);
+
+            Review[] returnValue =
+            {
+                new Review { Movie = 1, Grade = 5 },
+                new Review { Movie = 1, Grade = 5 },
+                new Review { Movie = 1, Grade = 5 },
+                new Review { Movie = 1, Grade = 5 },
+                new Review { Movie = 1, Grade = 5 },
+                new Review { Movie = 2, Grade = 5 },
+                new Review { Movie = 2, Grade = 4 },
+                new Review { Movie = 3, Grade = 3 },
+                new Review { Movie = 3, Grade = 3 },
+                new Review { Movie = 4, Grade = 2 },
+                new Review { Movie = 4, Grade = 2 },
+                new Review { Movie = 5, Grade = 2 },
+                new Review { Movie = 5, Grade = 1 },
+                new Review { Movie = 5, Grade = 1 },
+                new Review { Movie = 6, Grade = 1 },
+                new Review { Movie = 6, Grade = 1 }
+            };
+
+            mock.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => mService.GetTopRatedMovies(7));
+
+            Assert.Equal(
+                "Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')",
+                ex.Message);
+        }
         
         [Fact]
         public void TestForTopMovieByReviewer()
@@ -637,6 +706,30 @@ namespace TestProductionCodeXunit
         }
         
         [Fact]
+        public void TestForTopMovieByReviewerIfReviewerDoesNotExist()
+        {
+            Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
+
+            ReviewService mService = new ReviewService(mock.Object);
+
+            Review[] returnValue =
+            {
+                new Review { Reviewer = 1, Movie = 1, Grade = 1, ReviewDate = DateTime.Now.AddDays(-200) },
+                new Review { Reviewer = 1, Movie = 2, Grade = 5, ReviewDate = DateTime.Now.AddDays(-100) },
+                new Review { Reviewer = 1, Movie = 3, Grade = 2, ReviewDate = DateTime.Now.AddDays(-150) },
+                new Review { Reviewer = 2, Movie = 1, Grade = 5, ReviewDate = DateTime.Now.AddDays(-20) },
+                new Review { Reviewer = 1, Movie = 4, Grade = 2, ReviewDate = DateTime.Now.AddDays(-80) },
+                new Review { Reviewer = 3, Movie = 1, Grade = 1, ReviewDate = DateTime.Now.AddDays(-90) }
+            };
+
+            mock.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            var ex = Assert.Throws<ArgumentException>(() => mService.GetTopMoviesByReviewer(0));
+
+            Assert.Equal("Reviewer With id does not exist", ex.Message);
+        }
+        
+        [Fact]
         public void TestForReviewersOnGivenMovie()
         {
             Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
@@ -657,6 +750,27 @@ namespace TestProductionCodeXunit
             Assert.True(actualResult.Count == 2);
             Assert.Contains(returnValue[0].Reviewer, actualResult);
             Assert.Contains(returnValue[1].Reviewer, actualResult);
+        }
+        
+        [Fact]
+        public void TestForReviewersOnGivenMovieIfMovieDoesNotExist()
+        {
+            Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
+
+            ReviewService mService = new ReviewService(mock.Object);
+
+            Review[] returnValue =
+            {
+                new Review { Reviewer = 1, Movie = 1 },
+                new Review { Reviewer = 3, Movie = 1 },
+                new Review { Reviewer = 2, Movie = 2 }
+            };
+
+            mock.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            var ex = Assert.Throws<ArgumentException>(() => mService.GetReviewersByMovie(0));
+
+            Assert.Equal("Movie With id does not exist", ex.Message);
         }
     }
 }
