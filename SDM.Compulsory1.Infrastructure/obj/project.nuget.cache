@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8RKOxuNJ0sb9n2vD/DosvKADzTDKqiFWk16Lo1woOUot+I9WkZVpBlM3kM67OCf6VO1IAJrKUTvIvisWVbEZ7Q==",
+  "dgSpecHash": "CsNVNsiFbqan8fvGl/cU3m8vv9JlB8E6wNzz7++Kh1PpORLkTkbv335iK1lTczufHRa7bFeq7LaVEgf+k+kVrA==",
   "success": true,
-  "projectFilePath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj",
+  "projectFilePath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

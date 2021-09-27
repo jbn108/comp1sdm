@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "/home/franno/.nuget/packages/": {}
+    "/Users/jonasbuus/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj",
+      "projectUniqueName": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj",
       "projectName": "SDM.Compulsory1.Domain",
-      "projectPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj",
-      "packagesPath": "/home/franno/.nuget/packages/",
-      "outputPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Domain/obj/",
+      "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj",
+      "packagesPath": "/Users/jonasbuus/.nuget/packages/",
+      "outputPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/franno/.nuget/NuGet/NuGet.Config"
+        "/Users/jonasbuus/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -51,8 +51,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj": {
-              "projectPath": "/home/franno/Github/jbn108/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj"
+            "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj": {
+              "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj"
             }
           }
         }
@@ -81,7 +81,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.205/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }
