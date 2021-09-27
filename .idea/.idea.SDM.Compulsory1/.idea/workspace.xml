@@ -6,27 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b317014d-c0c5-4954-9b4a-b87fae92fa44" name="Changes" comment="method 1 test done">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SDM.Compulsory1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SDM.Compulsory1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDM.Compulsory1.Domain/Services/ReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SDM.Compulsory1.Domain/Services/ReviewService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDM.Compulsory1.Domain/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SDM.Compulsory1.Domain/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDM.Compulsory1.Domain/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SDM.Compulsory1.Domain/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDM.Compulsory1.Domain/bin/Debug/net5.0/ref/SDM.Compulsory1.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SDM.Compulsory1.Domain/bin/Debug/net5.0/ref/SDM.Compulsory1.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDM.Compulsory1.Domain/obj/Debug/net5.0/ref/SDM.Compulsory1.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SDM.Compulsory1.Domain/obj/Debug/net5.0/ref/SDM.Compulsory1.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SDM.Compulsory1.Infrastructure/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProductionCodeXunit/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProductionCodeXunit/UnitTest1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProductionCodeXunit/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProductionCodeXunit/bin/Debug/net5.0/SDM.Compulsory1.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProductionCodeXunit/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProductionCodeXunit/bin/Debug/net5.0/SDM.Compulsory1.Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProductionCodeXunit/bin/Debug/net5.0/TestProductionCodeXunit.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProductionCodeXunit/bin/Debug/net5.0/TestProductionCodeXunit.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProductionCodeXunit/bin/Debug/net5.0/TestProductionCodeXunit.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProductionCodeXunit/bin/Debug/net5.0/TestProductionCodeXunit.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProductionCodeXunit/bin/Debug/net5.0/ref/TestProductionCodeXunit.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProductionCodeXunit/bin/Debug/net5.0/ref/TestProductionCodeXunit.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProductionCodeXunit/obj/Debug/net5.0/TestProductionCodeXunit.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestProductionCodeXunit/obj/Debug/net5.0/TestProductionCodeXunit.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProductionCodeXunit/obj/Debug/net5.0/TestProductionCodeXunit.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProductionCodeXunit/obj/Debug/net5.0/TestProductionCodeXunit.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProductionCodeXunit/obj/Debug/net5.0/TestProductionCodeXunit.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestProductionCodeXunit/obj/Debug/net5.0/TestProductionCodeXunit.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProductionCodeXunit/obj/Debug/net5.0/ref/TestProductionCodeXunit.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestProductionCodeXunit/obj/Debug/net5.0/ref/TestProductionCodeXunit.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1632392537194</updated>
       <workItem from="1632392544969" duration="5799000" />
-      <workItem from="1632726525621" duration="6645000" />
+      <workItem from="1632726525621" duration="7219000" />
     </task>
     <task id="LOCAL-00001" summary="method 1, test 1">
       <created>1632394085952</created>

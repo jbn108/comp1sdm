@@ -19,6 +19,10 @@ namespace SDM.Compulsory1.Domain.Services
 
         public int GetNumberOfReviewsFromReviewer(int reviewer)
         {
+            if (reviewer < 1)
+            {
+                throw new ArgumentException("Invalid input!");
+            }
             int numberOfReviews = 0;
             foreach (var r in _repo.GetAll())
             {
@@ -26,6 +30,11 @@ namespace SDM.Compulsory1.Domain.Services
                 {
                     numberOfReviews++;
                 }
+            }
+
+            if (numberOfReviews == 0)
+            {
+                throw new ArgumentException("No Reviewer with that ID exist in the database!");
             }
 
             return numberOfReviews;
