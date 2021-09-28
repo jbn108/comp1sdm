@@ -109,8 +109,20 @@ namespace SDM.Compulsory1.Domain.Services
 
         public int GetNumberOfRates(int movie, int rate)
         {
+            List<Review> reviews = _repo.GetAll().ToList();
+
+            if (rate < 1 || rate > 5)
+            {
+                throw new ArgumentException("Rate must fit within 1-5");
+            }
+
+            if (reviews.FindAll(r => r.Movie == movie).Count == 0)
+            {
+                throw new ArgumentException("Movie with given id does not exist");
+            }
+            
             int numberOfRates = 0;
-            foreach (var r in _repo.GetAll().Where(r => r.Movie == movie))
+            foreach (var r in reviews.Where(r => r.Movie == movie))
             {
                 if (r.Grade == rate)
                 {
