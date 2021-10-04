@@ -771,7 +771,7 @@ namespace TestProductionCodeXunit
         [InlineData(
             5, 5, 3,
             5, 5, 5,
-            5, 5, 6,
+            1, 5, 6,
         new int[] { 5 })]
         public void GetMostProductiveReviewers(
             int a, int b, int c,
