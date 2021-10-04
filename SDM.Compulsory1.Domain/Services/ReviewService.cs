@@ -95,6 +95,10 @@ namespace SDM.Compulsory1.Domain.Services
 
         public double GetAverageRateOfMovie(int movie)
         {
+            if (movie < 1)
+            {
+                throw new ArgumentException("Invalid input!");
+            }
             int sum = 0;
             int numberOfReviews = 0;
 
@@ -104,7 +108,14 @@ namespace SDM.Compulsory1.Domain.Services
                 numberOfReviews++;
             }
 
-            return sum / numberOfReviews;
+            if (sum == 0)
+            {
+                throw new ArgumentException("Id not matching any movie!");
+            }
+            else
+            {
+                return sum / numberOfReviews;
+            }
         }
 
         public int GetNumberOfRates(int movie, int rate)

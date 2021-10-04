@@ -489,7 +489,64 @@ namespace TestProductionCodeXunit
         // GetAverageRateOfMovie
         
         [Fact]
-        public void GetAverageRateOfMovie()
+        public void GetAverageRateOfMovieA()
+        {
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = 1, Grade = 5, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 5, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 3, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 1, Movie = 7, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            //Act
+            double actualResult = mService.GetAverageRateOfMovie(7);
+
+            //Assert
+            m.Verify(m => m.GetAll(), Times.Once);
+
+            Assert.True(actualResult == 3);
+        }
+        
+        [Fact]
+        public void GetAverageRateOfMovieB()
+        {
+            //Arrange
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+
+            Review[] returnValue =
+            {
+                new Review() {Reviewer = 1, Grade = 5, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 5, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 3, Movie = 7, ReviewDate = DateTime.Now},
+                new Review() {Reviewer = 1, Grade = 1, Movie = 7, ReviewDate = DateTime.Now}
+            };
+            m.Setup(m => m.GetAll()).Returns(() => returnValue);
+
+            ReviewService mService = new ReviewService(m.Object);
+
+            //Act
+            var result = 
+                Assert.Throws<ArgumentException>(() => mService.GetAverageRateOfMovie(4));
+
+            //Assert
+            Assert.Equal("Id not matching any movie!", result.Message);
+        }
+        
+        [Fact]
+        public void GetAverageRateOfMovieInvalidMovieId()
         {
             //Arrange
             Mock<IReviewRepository> m = new Mock<IReviewRepository>();
@@ -509,13 +566,14 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Act
-            double actualResult = mService.GetAverageRateOfMovie(7);
+            var result = 
+                Assert.Throws<ArgumentException>(() => mService.GetAverageRateOfMovie(-5));
 
             //Assert
-            m.Verify(m => m.GetAll(), Times.Once);
-
-            Assert.True(actualResult == 2);
+            Assert.Equal("Invalid input!", result.Message);
         }
+        
+     
         
         // GetNumberOfRates
         
