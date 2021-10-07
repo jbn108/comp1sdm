@@ -13,7 +13,7 @@ namespace TestProductionCodeXunit
     {
         // Test: GetNumberOfReviewsForReviewer()
 
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForNumberOfReviewsA()
         {
             //Arrange
@@ -43,7 +43,7 @@ namespace TestProductionCodeXunit
 
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForNumberOfReviewsB()
         {
             //Arrange
@@ -73,7 +73,7 @@ namespace TestProductionCodeXunit
 
         }
 
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForNegativeReviewId()
         {
             //Arrange
@@ -102,7 +102,7 @@ namespace TestProductionCodeXunit
             
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForInvalidReviewerId()
         {
             //Arrange
@@ -134,7 +134,7 @@ namespace TestProductionCodeXunit
 
         
         // GetAverageRateFromReviewer()
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForAverageRateFromReviewerA()
         {
             //Arrange
@@ -163,7 +163,7 @@ namespace TestProductionCodeXunit
             Assert.True(actualResult == 2);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForAverageRateFromReviewerB()
         {
             //Arrange
@@ -192,7 +192,7 @@ namespace TestProductionCodeXunit
             Assert.True(actualResult == 3);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForNegativeReviewIdForMethodTwo()
         {
             //Arrange
@@ -221,7 +221,7 @@ namespace TestProductionCodeXunit
             
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForInvalidReviewerIdForMethodTwo()
         {
             //Arrange
@@ -253,7 +253,7 @@ namespace TestProductionCodeXunit
 
         // GetNumberOfRatesByReviewer
 
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForNumberOfRatesFromReviewer()
         {
             //Arrange
@@ -282,7 +282,7 @@ namespace TestProductionCodeXunit
             Assert.True(actualResult == 4);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForNumberOfRatesFromReviewerNoRatingCase()
         {
             //Arrange
@@ -311,7 +311,7 @@ namespace TestProductionCodeXunit
             Assert.True(actualResult == 0);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForNumberOfRatesFromReviewerNegativeReviewId()
         {
             //Arrange
@@ -340,7 +340,7 @@ namespace TestProductionCodeXunit
             
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForNumberOfRatesFromReviewerInvalidRateLOW()
         {
             //Arrange
@@ -369,7 +369,7 @@ namespace TestProductionCodeXunit
             
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForNumberOfRatesFromReviewerInvalidRateHIGH()
         {
             //Arrange
@@ -400,7 +400,7 @@ namespace TestProductionCodeXunit
         
         // GetNumberOfReviews
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void GetNumberOfReviews()
         {
             //Arrange
@@ -429,7 +429,7 @@ namespace TestProductionCodeXunit
             Assert.True(actualResult == 4);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void GetNumberOfReviewsNoReviews()
         {
             //Arrange
@@ -458,7 +458,7 @@ namespace TestProductionCodeXunit
             Assert.True(actualResult == 0);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void GetNumberOfReviewsInvalidMovieId()
         {
             //Arrange
@@ -488,7 +488,7 @@ namespace TestProductionCodeXunit
 
         // GetAverageRateOfMovie
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void GetAverageRateOfMovieA()
         {
             //Arrange
@@ -517,7 +517,7 @@ namespace TestProductionCodeXunit
             Assert.True(actualResult == 3);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void GetAverageRateOfMovieB()
         {
             //Arrange
@@ -545,7 +545,7 @@ namespace TestProductionCodeXunit
             Assert.Equal("Id not matching any movie!", result.Message);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void GetAverageRateOfMovieInvalidMovieId()
         {
             //Arrange
@@ -577,7 +577,7 @@ namespace TestProductionCodeXunit
         
         // GetNumberOfRates
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void GetNumberOfRates()
         {
             //Arrange
@@ -606,7 +606,7 @@ namespace TestProductionCodeXunit
             Assert.True(actualResult == 7);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void GetNumberOfRatesIfRateIsNegative()
         {
             //Arrange
@@ -632,7 +632,7 @@ namespace TestProductionCodeXunit
             Assert.Equal("Rate must fit within 1-5", ex.Message);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void GetNumberOfRatesIfRateIsAboveUpperBound()
         {
             //Arrange
@@ -658,7 +658,7 @@ namespace TestProductionCodeXunit
             Assert.Equal("Rate must fit within 1-5", ex.Message);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void GetNumberOfRatesIfMovieIdDoesNotExist()
         {
             //Arrange
@@ -685,7 +685,7 @@ namespace TestProductionCodeXunit
         }
         // GetMoviesWithHighestNumberOfTopRates
 
-        [Theory]
+        [Theory(Timeout = 2000)]
 
         //Reviewer, Grade, Movie
         [InlineData(
@@ -745,7 +745,7 @@ namespace TestProductionCodeXunit
 
         // GetMostProductiveReviewers
 
-        [Theory]
+        [Theory(Timeout = 2000)]
 
         //Reviewer, Grade, Movie
         [InlineData(
@@ -806,7 +806,8 @@ namespace TestProductionCodeXunit
             Assert.Equal(mService.GetMostProductiveReviewers(), expResult);
         }
 
-        [Fact]
+        [Fact(Timeout = 2000)]
+        
         public void GetMostProductiveReviewersButIsEmptyTest()
         {
 
@@ -827,7 +828,7 @@ namespace TestProductionCodeXunit
 
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForTopNMoviesBasedOnAverageRating()
         {
             Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
@@ -867,7 +868,7 @@ namespace TestProductionCodeXunit
             );
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForTopNMoviesBasedOnAverageRatingWithLessThan1N()
         {
             Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
@@ -901,7 +902,7 @@ namespace TestProductionCodeXunit
             Assert.Equal("Param needs to be 1 or above.", ex.Message);
         }
 
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForTopNMoviesBasedOnAverageRatingWithAboveUpperBound()
         {
             Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
@@ -937,7 +938,7 @@ namespace TestProductionCodeXunit
                 ex.Message);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForTopMovieByReviewer()
         {
             Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
@@ -967,7 +968,7 @@ namespace TestProductionCodeXunit
             );
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForTopMovieByReviewerIfReviewerDoesNotExist()
         {
             Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
@@ -991,7 +992,7 @@ namespace TestProductionCodeXunit
             Assert.Equal("Reviewer With id does not exist", ex.Message);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForReviewersOnGivenMovie()
         {
             Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
@@ -1014,7 +1015,7 @@ namespace TestProductionCodeXunit
             Assert.Contains(returnValue[1].Reviewer, actualResult);
         }
         
-        [Fact]
+        [Fact(Timeout = 2000)]
         public void TestForReviewersOnGivenMovieIfMovieDoesNotExist()
         {
             Mock<IReviewRepository> mock = new Mock<IReviewRepository>();
