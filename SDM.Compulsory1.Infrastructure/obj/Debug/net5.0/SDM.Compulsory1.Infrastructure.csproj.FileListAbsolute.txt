@@ -28,7 +28,6 @@
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.AssemblyInfoInputs.cache
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.AssemblyInfo.cs
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.csproj.CoreCompileInputs.cache
-/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.csproj.CopyComplete
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.dll
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/ref/SDM.Compulsory1.Infrastructure.dll
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Infrastructure/obj/Debug/net5.0/SDM.Compulsory1.Infrastructure.pdb

@@ -24,7 +24,6 @@
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.AssemblyInfoInputs.cache
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.AssemblyInfo.cs
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.csproj.CoreCompileInputs.cache
-/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.csproj.CopyComplete
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.dll
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/ref/SDM.Compulsory1.Domain.dll
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/obj/Debug/net5.0/SDM.Compulsory1.Domain.pdb
