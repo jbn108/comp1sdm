@@ -6506,19 +6506,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/jonasbuus/.nuget/packages/": {}
+    "/home/dp/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonasbuus/RiderProjects/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
+      "projectUniqueName": "/home/dp/Documents/School/vscodeschool/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
       "projectName": "TestProductionCodeXunit",
-      "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
-      "packagesPath": "/Users/jonasbuus/.nuget/packages/",
-      "outputPath": "/Users/jonasbuus/RiderProjects/comp1sdm/TestProductionCodeXunit/obj/",
+      "projectPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
+      "packagesPath": "/home/dp/.nuget/packages/",
+      "outputPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/TestProductionCodeXunit/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/jonasbuus/.nuget/NuGet/NuGet.Config"
+        "/home/dp/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -6530,11 +6530,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj": {
-              "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj"
+            "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj": {
+              "projectPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj"
             },
-            "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj": {
-              "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj"
+            "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj": {
+              "projectPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj"
             }
           }
         }
@@ -6589,7 +6589,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YqIzhEiRMY6nUIr4BY4Wb2YNQTN9O4ZRK0d1sIC+CPmCQOUY5fCkSe5/Lw3OX0riapbQjYtKXTMAAQNv/4uYVg==",
+  "dgSpecHash": "mib/tL7SQlCx7dMHY6twqBpmhkUCce2FYqy/VIJS1V2oHo8CFS+D8GreJF73/Z6ur+PkRjcavbwbfDJD6tt+Lw==",
   "success": true,
-  "projectFilePath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj",
+  "projectFilePath": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

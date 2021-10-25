@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj": {}
+    "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj": {}
   },
   "projects": {
-    "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj": {
+    "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
+        "projectUniqueName": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
         "projectName": "SDM.Compulsory1.API",
-        "projectPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
-        "packagesPath": "/Users/jonasbuus/.nuget/packages/",
-        "outputPath": "/Users/jonasbuus/RiderProjects/comp1sdm/SDM.Compulsory1.API/obj/",
+        "projectPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
+        "packagesPath": "/home/dp/.nuget/packages/",
+        "outputPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jonasbuus/.nuget/NuGet/NuGet.Config"
+          "/home/dp/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
         }
       }
     }
