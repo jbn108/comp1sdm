@@ -773,7 +773,7 @@ namespace TestProductionCodeXunit
             5, 5, 3,
             5, 5, 5,
             1, 5, 6,
-        new int[] { 5,1 })]
+        new int[] { 5, 1 })]
         public void GetMostProductiveReviewers(
             int a, int b, int c,
             int a1, int b1, int c1,
