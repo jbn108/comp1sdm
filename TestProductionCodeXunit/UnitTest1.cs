@@ -23,7 +23,7 @@ namespace TestProductionCodeXunit
 
             Assert.True(rep.GetAll().ToList()[0].Reviewer.Equals(1));
             Assert.True(rep.GetAll().ToList()[0].Movie.Equals(1488844));
-            Assert.True(rep.GetAll().ToList()[0].Grade.Equals(3));
+            Assert.True(rep.GetAll().ToList()[0].Grade.Equals(3))
 
         }
 
