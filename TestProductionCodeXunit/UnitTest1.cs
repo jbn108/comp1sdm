@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using Moq;
 using SDM.Compulsory1.Core.Models;
 using SDM.Compulsory1.Domain.IRepositories;
@@ -12,6 +14,111 @@ namespace TestProductionCodeXunit
     public class UnitTest1
     {
         // Test: GetNumberOfReviewsForReviewer()
+
+        [Fact]
+        public void TestFileReaderWorks()
+        {
+            ReviewRepository rep = new ReviewRepository();
+            rep.ReadFile(@"/home/dp/Documents/School_VSCode/comp1sdm/TestProductionCodeXunit/testfiles/ratings2.json");
+
+            Assert.True(rep.GetAll().ToList()[0].Reviewer.Equals(1));
+            Assert.True(rep.GetAll().ToList()[0].Movie.Equals(1488844));
+            Assert.True(rep.GetAll().ToList()[0].Grade.Equals(3));
+
+        }
+
+        [Fact]
+        public void Testsome()
+        {
+            Stopwatch sw = new Stopwatch();
+
+            sw.Start();
+
+            ReviewRepository rep = new ReviewRepository();
+            rep.ReadFile(@"/home/dp/Documents/School_VSCode/comp1sdm/TestProductionCodeXunit/testfiles/ratings.json");
+
+            ReviewService rs = new ReviewService(rep);
+            sw.Stop();
+
+            Console.WriteLine("ms load time : " + sw.ElapsedMilliseconds);
+
+            Assert.Equal(rs.GetAverageRateFromReviewer(1, 5), rs.GetAverageRateFromReviewer(1, 1));
+            sw.Restart();
+            rs.GetAverageRateFromReviewer(1, 5);
+            sw.Stop();
+            Assert.True(100 > sw.ElapsedMilliseconds, "Average rate from reviewer is less than 2 seconds");
+
+            sw.Restart();
+
+            rs.GetAverageRateOfMovie(1488844);
+            sw.Stop();
+            Assert.True(2000 > sw.ElapsedMilliseconds, "Average rate of movie is less than 2 seconds");
+            sw.Restart();
+
+            sw.Start();
+            /*
+                                    rs.GetMostProductiveReviewers();
+                                    sw.Stop();
+                                    Assert.True(2000>sw.ElapsedMilliseconds, "Most productive reviewers is less than 2 seconds");
+                                    sw.Restart();
+                                    sw.Start();
+
+                                    rs.GetMoviesWithHighestNumberOfTopRates();
+                                    sw.Stop();
+                                    Assert.True(2000>sw.ElapsedMilliseconds, "Get movies with highest number of top rates is less than 2 seconds");
+                                    sw.Restart();
+
+                                    sw.Start();
+
+                                    rs.GetNumberOfRates(1,1);
+                                    sw.Stop();
+                                    Assert.True(2000>sw.ElapsedMilliseconds, "number of rates is less than 2 seconds");
+                                    sw.Restart();
+
+                                    sw.Start();
+
+                                    rs.GetNumberOfRatesByReviewer(1,1);
+                                    sw.Stop();
+                                    Assert.True(2000>sw.ElapsedMilliseconds,"number of rates by reviewer");
+                                    sw.Restart();
+
+                                    sw.Start();
+
+                                    rs.GetNumberOfReviews(1);
+                                    sw.Stop();
+                                    Assert.True(2000>sw.ElapsedMilliseconds, "number of reviews is less than 2 seconds");
+                                    sw.Restart();
+
+                                    sw.Start();
+
+                                    rs.GetNumberOfReviewsFromReviewer(1);
+                                    sw.Stop();
+                                    Assert.True(2000>sw.ElapsedMilliseconds, "number of reviews from reviewer less than 2 seconds");
+                                    sw.Restart();
+
+                                    sw.Start();
+
+                                    rs.GetReviewersByMovie(1);
+                                    sw.Stop();
+                                    Assert.True(2000>sw.ElapsedMilliseconds, "reviewers by movie");
+                                    sw.Restart();
+
+                                    sw.Start();
+
+                                    rs.GetTopMoviesByReviewer(1);
+                                    sw.Stop();
+                                    Assert.True(2000>sw.ElapsedMilliseconds, "GetTopMoviesByReviewer");
+                                    sw.Restart();
+
+                                    rs.GetTopRatedMovies(1);
+                                    sw.Stop();
+                                    Assert.True(2000>sw.ElapsedMilliseconds, "GetTopeRatedMOvies");
+                                    sw.Restart();
+
+
+                                    Console.WriteLine(sw.Elapsed);
+                                    */
+        }
 
         [Fact]
         public void TestForNumberOfReviewsA()
@@ -42,7 +149,7 @@ namespace TestProductionCodeXunit
             Assert.True(actualResult == 6);
 
         }
-        
+
         [Fact]
         public void TestForNumberOfReviewsB()
         {
@@ -94,14 +201,14 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Act
-            var result = 
+            var result =
                 Assert.Throws<ArgumentException>(() => mService.GetNumberOfReviewsFromReviewer(-5));
 
             //Assert
             Assert.Equal("Invalid input!", result.Message);
-            
+
         }
-        
+
         [Fact]
         public void TestForInvalidReviewerId()
         {
@@ -123,16 +230,16 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Act
-            var result = 
+            var result =
                 Assert.Throws<ArgumentException>(() => mService.GetNumberOfReviewsFromReviewer(9999));
 
             //Assert
             m.Verify(m => m.GetAll(), Times.Once);
             Assert.Equal("No Reviewer with that ID exist in the database!", result.Message);
-            
+
         }
 
-        
+
         // GetAverageRateFromReviewer()
         [Fact]
         public void TestForAverageRateFromReviewerA()
@@ -162,7 +269,7 @@ namespace TestProductionCodeXunit
 
             Assert.True(actualResult == 2);
         }
-        
+
         [Fact]
         public void TestForAverageRateFromReviewerB()
         {
@@ -191,7 +298,7 @@ namespace TestProductionCodeXunit
 
             Assert.True(actualResult == 3);
         }
-        
+
         [Fact]
         public void TestForNegativeReviewIdForMethodTwo()
         {
@@ -213,14 +320,14 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Act
-            var result = 
+            var result =
                 Assert.Throws<ArgumentException>(() => mService.GetAverageRateFromReviewer(-5));
 
             //Assert
             Assert.Equal("Invalid input!", result.Message);
-            
+
         }
-        
+
         [Fact]
         public void TestForInvalidReviewerIdForMethodTwo()
         {
@@ -242,13 +349,13 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Act
-            var result = 
+            var result =
                 Assert.Throws<ArgumentException>(() => mService.GetAverageRateFromReviewer(9999));
 
             //Assert
             m.Verify(m => m.GetAll(), Times.Once);
             Assert.Equal("No Reviewer with that ID exist in the database!", result.Message);
-            
+
         }
 
         // GetNumberOfRatesByReviewer
@@ -281,7 +388,7 @@ namespace TestProductionCodeXunit
 
             Assert.True(actualResult == 4);
         }
-        
+
         [Fact]
         public void TestForNumberOfRatesFromReviewerNoRatingCase()
         {
@@ -310,7 +417,7 @@ namespace TestProductionCodeXunit
 
             Assert.True(actualResult == 0);
         }
-        
+
         [Fact]
         public void TestForNumberOfRatesFromReviewerNegativeReviewId()
         {
@@ -332,14 +439,14 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Act
-            var result = 
+            var result =
                 Assert.Throws<ArgumentException>(() => mService.GetNumberOfRatesByReviewer(-5, 2));
 
             //Assert
             Assert.Equal("Invalid input!", result.Message);
-            
+
         }
-        
+
         [Fact]
         public void TestForNumberOfRatesFromReviewerInvalidRateLOW()
         {
@@ -361,14 +468,14 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Act
-            var result = 
+            var result =
                 Assert.Throws<ArgumentException>(() => mService.GetNumberOfRatesByReviewer(1, -5));
 
             //Assert
             Assert.Equal("Invalid input!", result.Message);
-            
+
         }
-        
+
         [Fact]
         public void TestForNumberOfRatesFromReviewerInvalidRateHIGH()
         {
@@ -390,16 +497,16 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Act
-            var result = 
+            var result =
                 Assert.Throws<ArgumentException>(() => mService.GetNumberOfRatesByReviewer(1, 8));
 
             //Assert
             Assert.Equal("Invalid input!", result.Message);
-            
+
         }
-        
+
         // GetNumberOfReviews
-        
+
         [Fact]
         public void GetNumberOfReviews()
         {
@@ -428,7 +535,7 @@ namespace TestProductionCodeXunit
 
             Assert.True(actualResult == 4);
         }
-        
+
         [Fact]
         public void GetNumberOfReviewsNoReviews()
         {
@@ -457,7 +564,7 @@ namespace TestProductionCodeXunit
 
             Assert.True(actualResult == 0);
         }
-        
+
         [Fact]
         public void GetNumberOfReviewsInvalidMovieId()
         {
@@ -479,7 +586,7 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Act
-            var result = 
+            var result =
                 Assert.Throws<ArgumentException>(() => mService.GetNumberOfReviews(-5));
 
             //Assert
@@ -487,7 +594,7 @@ namespace TestProductionCodeXunit
         }
 
         // GetAverageRateOfMovie
-        
+
         [Fact]
         public void GetAverageRateOfMovieA()
         {
@@ -516,7 +623,7 @@ namespace TestProductionCodeXunit
 
             Assert.True(actualResult == 3);
         }
-        
+
         [Fact]
         public void GetAverageRateOfMovieB()
         {
@@ -538,13 +645,13 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Act
-            var result = 
+            var result =
                 Assert.Throws<ArgumentException>(() => mService.GetAverageRateOfMovie(4));
 
             //Assert
             Assert.Equal("Id not matching any movie!", result.Message);
         }
-        
+
         [Fact]
         public void GetAverageRateOfMovieInvalidMovieId()
         {
@@ -566,17 +673,17 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Act
-            var result = 
+            var result =
                 Assert.Throws<ArgumentException>(() => mService.GetAverageRateOfMovie(-5));
 
             //Assert
             Assert.Equal("Invalid input!", result.Message);
         }
-        
-     
-        
+
+
+
         // GetNumberOfRates
-        
+
         [Fact]
         public void GetNumberOfRates()
         {
@@ -602,10 +709,10 @@ namespace TestProductionCodeXunit
 
             //Assert
             m.Verify(m => m.GetAll(), Times.Once);
-            
+
             Assert.True(actualResult == 7);
         }
-        
+
         [Fact]
         public void GetNumberOfRatesIfRateIsNegative()
         {
@@ -625,13 +732,13 @@ namespace TestProductionCodeXunit
             m.Setup(m => m.GetAll()).Returns(() => returnValue);
 
             ReviewService mService = new ReviewService(m.Object);
-            
+
             //Assert
-            var ex = Assert.Throws<ArgumentException>(() => mService.GetNumberOfRates(7,-2));
+            var ex = Assert.Throws<ArgumentException>(() => mService.GetNumberOfRates(7, -2));
 
             Assert.Equal("Rate must fit within 1-5", ex.Message);
         }
-        
+
         [Fact]
         public void GetNumberOfRatesIfRateIsAboveUpperBound()
         {
@@ -651,13 +758,13 @@ namespace TestProductionCodeXunit
             m.Setup(m => m.GetAll()).Returns(() => returnValue);
 
             ReviewService mService = new ReviewService(m.Object);
-            
+
             //Assert
-            var ex = Assert.Throws<ArgumentException>(() => mService.GetNumberOfRates(7,6));
+            var ex = Assert.Throws<ArgumentException>(() => mService.GetNumberOfRates(7, 6));
 
             Assert.Equal("Rate must fit within 1-5", ex.Message);
         }
-        
+
         [Fact]
         public void GetNumberOfRatesIfMovieIdDoesNotExist()
         {
@@ -679,7 +786,7 @@ namespace TestProductionCodeXunit
             ReviewService mService = new ReviewService(m.Object);
 
             //Assert
-            var ex = Assert.Throws<ArgumentException>(() => mService.GetNumberOfRates(0,2));
+            var ex = Assert.Throws<ArgumentException>(() => mService.GetNumberOfRates(0, 2));
 
             Assert.Equal("Movie with given id does not exist", ex.Message);
         }
@@ -826,7 +933,7 @@ namespace TestProductionCodeXunit
             Assert.Throws<InvalidOperationException>(() => mService.GetMostProductiveReviewers());
 
         }
-        
+
         [Fact]
         public void TestForTopNMoviesBasedOnAverageRating()
         {
@@ -857,16 +964,16 @@ namespace TestProductionCodeXunit
             List<int> actualResult = mService.GetTopRatedMovies(5);
 
             mock.Verify(m => m.GetAll(), Times.Once);
-            
+
             Assert.Collection(actualResult,
                 item => Assert.Equal(1, item),
                 item => Assert.Equal(2, item),
                 item => Assert.Equal(3, item),
-                item => Assert.Equal(4,item),
+                item => Assert.Equal(4, item),
                 item => Assert.Equal(5, item)
             );
         }
-        
+
         [Fact]
         public void TestForTopNMoviesBasedOnAverageRatingWithLessThan1N()
         {
@@ -936,7 +1043,7 @@ namespace TestProductionCodeXunit
                 "Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')",
                 ex.Message);
         }
-        
+
         [Fact]
         public void TestForTopMovieByReviewer()
         {
@@ -946,10 +1053,10 @@ namespace TestProductionCodeXunit
 
             Review[] returnValue = { new Review {Reviewer = 1, Movie = 1, Grade = 1, ReviewDate = DateTime.Now.AddDays(-200)},
                 new Review {Reviewer = 1, Movie = 2, Grade = 5, ReviewDate = DateTime.Now.AddDays(-100)},
-                new Review {Reviewer = 1, Movie = 3, Grade = 2, ReviewDate = DateTime.Now.AddDays(-150)}, 
+                new Review {Reviewer = 1, Movie = 3, Grade = 2, ReviewDate = DateTime.Now.AddDays(-150)},
                 new Review {Reviewer = 2, Movie = 1, Grade = 5, ReviewDate = DateTime.Now.AddDays(-20)},
                 new Review {Reviewer = 1, Movie = 4, Grade = 2, ReviewDate = DateTime.Now.AddDays(-80)},
-                new Review {Reviewer = 3, Movie = 1, Grade = 1, ReviewDate = DateTime.Now.AddDays(-90)} 
+                new Review {Reviewer = 3, Movie = 1, Grade = 1, ReviewDate = DateTime.Now.AddDays(-90)}
             };
 
             mock.Setup(m => m.GetAll()).Returns(() => returnValue);
@@ -963,10 +1070,10 @@ namespace TestProductionCodeXunit
                 item => Assert.Equal(2, item),
                 item => Assert.Equal(4, item),
                 item => Assert.Equal(3, item),
-                item => Assert.Equal(1,item)
+                item => Assert.Equal(1, item)
             );
         }
-        
+
         [Fact]
         public void TestForTopMovieByReviewerIfReviewerDoesNotExist()
         {
@@ -990,7 +1097,7 @@ namespace TestProductionCodeXunit
 
             Assert.Equal("Reviewer With id does not exist", ex.Message);
         }
-        
+
         [Fact]
         public void TestForReviewersOnGivenMovie()
         {
@@ -1000,7 +1107,7 @@ namespace TestProductionCodeXunit
 
             Review[] returnValue = { new Review {Reviewer = 1, Movie = 1},
                 new Review {Reviewer = 3, Movie = 1},
-                new Review {Reviewer = 2, Movie = 2} 
+                new Review {Reviewer = 2, Movie = 2}
             };
 
             mock.Setup(m => m.GetAll()).Returns(() => returnValue);
@@ -1013,7 +1120,7 @@ namespace TestProductionCodeXunit
             Assert.Contains(returnValue[0].Reviewer, actualResult);
             Assert.Contains(returnValue[1].Reviewer, actualResult);
         }
-        
+
         [Fact]
         public void TestForReviewersOnGivenMovieIfMovieDoesNotExist()
         {
