@@ -18,7 +18,7 @@ namespace TestProductionCodeXunit
         public void TestForNumberOfReviewsA()
         {
             //Arrange
-            Mock<IReviewRepository> m = new Mock<IReviewRepository>()
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
 
             Review[] returnValue =
             {
@@ -48,7 +48,7 @@ namespace TestProductionCodeXunit
         public void TestForNumberOfReviewsB()
         {
             //Arrange
-            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>()
 
             Review[] returnValue =
             {
