@@ -13,118 +13,12 @@ namespace TestProductionCodeXunit
 {
     public class UnitTest1
     {
-        // Test: GetNumberOfReviewsForReviewer()
-
-        [Fact]
-        public void TestFileReaderWorks()
-        {
-            ReviewRepository rep = new ReviewRepository();
-            rep.ReadFile(@"/home/dp/Documents/School_VSCode/comp1sdm/TestProductionCodeXunit/testfiles/ratings2.json");
-
-            Assert.True(rep.GetAll().ToList()[0].Reviewer.Equals(1));
-            Assert.True(rep.GetAll().ToList()[0].Movie.Equals(1488844));
-            Assert.True(rep.GetAll().ToList()[0].Grade.Equals(3));
-
-        }
-
-        [Fact]
-        public void Testsome()
-        {
-            Stopwatch sw = new Stopwatch();
-
-            sw.Start();
-
-            ReviewRepository rep = new ReviewRepository();
-            rep.ReadFile(@"/home/dp/Documents/School_VSCode/comp1sdm/TestProductionCodeXunit/testfiles/ratings.json");
-
-            ReviewService rs = new ReviewService(rep);
-            sw.Stop();
-
-            Console.WriteLine("ms load time : " + sw.ElapsedMilliseconds);
-
-            Assert.Equal(rs.GetAverageRateFromReviewer(1, 5), rs.GetAverageRateFromReviewer(1, 1));
-            sw.Restart();
-            rs.GetAverageRateFromReviewer(1, 5);
-            sw.Stop();
-            Assert.True(100 > sw.ElapsedMilliseconds, "Average rate from reviewer is less than 2 seconds");
-
-            sw.Restart();
-
-            rs.GetAverageRateOfMovie(1488844);
-            sw.Stop();
-            Assert.True(2000 > sw.ElapsedMilliseconds, "Average rate of movie is less than 2 seconds");
-            sw.Restart();
-
-            sw.Start();
-            /*
-                                    rs.GetMostProductiveReviewers();
-                                    sw.Stop();
-                                    Assert.True(2000>sw.ElapsedMilliseconds, "Most productive reviewers is less than 2 seconds");
-                                    sw.Restart();
-                                    sw.Start();
-
-                                    rs.GetMoviesWithHighestNumberOfTopRates();
-                                    sw.Stop();
-                                    Assert.True(2000>sw.ElapsedMilliseconds, "Get movies with highest number of top rates is less than 2 seconds");
-                                    sw.Restart();
-
-                                    sw.Start();
-
-                                    rs.GetNumberOfRates(1,1);
-                                    sw.Stop();
-                                    Assert.True(2000>sw.ElapsedMilliseconds, "number of rates is less than 2 seconds");
-                                    sw.Restart();
-
-                                    sw.Start();
-
-                                    rs.GetNumberOfRatesByReviewer(1,1);
-                                    sw.Stop();
-                                    Assert.True(2000>sw.ElapsedMilliseconds,"number of rates by reviewer");
-                                    sw.Restart();
-
-                                    sw.Start();
-
-                                    rs.GetNumberOfReviews(1);
-                                    sw.Stop();
-                                    Assert.True(2000>sw.ElapsedMilliseconds, "number of reviews is less than 2 seconds");
-                                    sw.Restart();
-
-                                    sw.Start();
-
-                                    rs.GetNumberOfReviewsFromReviewer(1);
-                                    sw.Stop();
-                                    Assert.True(2000>sw.ElapsedMilliseconds, "number of reviews from reviewer less than 2 seconds");
-                                    sw.Restart();
-
-                                    sw.Start();
-
-                                    rs.GetReviewersByMovie(1);
-                                    sw.Stop();
-                                    Assert.True(2000>sw.ElapsedMilliseconds, "reviewers by movie");
-                                    sw.Restart();
-
-                                    sw.Start();
-
-                                    rs.GetTopMoviesByReviewer(1);
-                                    sw.Stop();
-                                    Assert.True(2000>sw.ElapsedMilliseconds, "GetTopMoviesByReviewer");
-                                    sw.Restart();
-
-                                    rs.GetTopRatedMovies(1);
-                                    sw.Stop();
-                                    Assert.True(2000>sw.ElapsedMilliseconds, "GetTopeRatedMOvies");
-                                    sw.Restart();
-
-
-                                    Console.WriteLine(sw.Elapsed);
-                                    */
-        }
 
         [Fact]
         public void TestForNumberOfReviewsA()
         {
             //Arrange
-            Mock<IReviewRepository> m = new Mock<IReviewRepository>();
+            Mock<IReviewRepository> m = new Mock<IReviewRepository>()
 
             Review[] returnValue =
             {
