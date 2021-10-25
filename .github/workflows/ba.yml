@@ -1,9 +1,0 @@
-- name: ba
-  # You may pin to the exact commit or the version.
-  # uses: AutoModality/action-xunit-viewer@84fcb7a680f68593da2c04d47332f163d5a1957b
-  uses: AutoModality/action-xunit-viewer@v1.0.1
-  with:
-    # File/Folder of test results
-    results: # default is test-reports
-    # Output filename including optional path
-    output: test.results
