@@ -6,4 +6,4 @@
     # File/Folder of test results
     results: # default is test-reports
     # Output filename including optional path
-    output: # optional
+    output: test.results
