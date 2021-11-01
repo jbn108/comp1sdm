@@ -22,3 +22,15 @@
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.dll
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/ref/SDM.Compulsory1.Core.dll
 /home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.pdb
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/bin/Debug/net5.0/SDM.Compulsory1.Core.deps.json
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/bin/Debug/net5.0/SDM.Compulsory1.Core.dll
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/bin/Debug/net5.0/ref/SDM.Compulsory1.Core.dll
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/bin/Debug/net5.0/SDM.Compulsory1.Core.pdb
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.csproj.AssemblyReference.cache
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.AssemblyInfoInputs.cache
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.AssemblyInfo.cs
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.csproj.CoreCompileInputs.cache
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.dll
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/ref/SDM.Compulsory1.Core.dll
+/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/obj/Debug/net5.0/SDM.Compulsory1.Core.pdb

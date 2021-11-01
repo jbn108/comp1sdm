@@ -6511,11 +6511,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dp/Documents/School/vscodeschool/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
+      "projectUniqueName": "/home/dp/Documents/School_VSCode/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
       "projectName": "TestProductionCodeXunit",
-      "projectPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
+      "projectPath": "/home/dp/Documents/School_VSCode/comp1sdm/TestProductionCodeXunit/TestProductionCodeXunit.csproj",
       "packagesPath": "/home/dp/.nuget/packages/",
-      "outputPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/TestProductionCodeXunit/obj/",
+      "outputPath": "/home/dp/Documents/School_VSCode/comp1sdm/TestProductionCodeXunit/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/dp/.nuget/NuGet/NuGet.Config"
@@ -6530,11 +6530,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj": {
-              "projectPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj"
+            "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj": {
+              "projectPath": "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Domain/SDM.Compulsory1.Domain.csproj"
             },
-            "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj": {
-              "projectPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj"
+            "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj": {
+              "projectPath": "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Infrastructure/SDM.Compulsory1.Infrastructure.csproj"
             }
           }
         }

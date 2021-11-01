@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj": {}
+    "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj": {}
   },
   "projects": {
-    "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj": {
+    "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
+        "projectUniqueName": "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
         "projectName": "SDM.Compulsory1.API",
-        "projectPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
+        "projectPath": "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.API/SDM.Compulsory1.API.csproj",
         "packagesPath": "/home/dp/.nuget/packages/",
-        "outputPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.API/obj/",
+        "outputPath": "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dp/.nuget/NuGet/NuGet.Config"

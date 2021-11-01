@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj",
+      "projectUniqueName": "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj",
       "projectName": "SDM.Compulsory1.Core",
-      "projectPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj",
+      "projectPath": "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/SDM.Compulsory1.Core.csproj",
       "packagesPath": "/home/dp/.nuget/packages/",
-      "outputPath": "/home/dp/Documents/School/vscodeschool/comp1sdm/SDM.Compulsory1.Core/obj/",
+      "outputPath": "/home/dp/Documents/School_VSCode/comp1sdm/SDM.Compulsory1.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/dp/.nuget/NuGet/NuGet.Config"
