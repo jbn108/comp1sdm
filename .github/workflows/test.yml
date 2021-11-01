@@ -3,11 +3,7 @@ jobs:
   build: 
     runs-on: ubuntu-latest
     steps:
-    - name: get python3
-      run: sudo apt-get install python3
-      shell: bash
     - name: echo
-      run: "cat > test.py
-        print/(123456/)"
+      run: echo peepee poopoo
     - name: wowsecret    
-      run: python3 test.py
+      run: echo ${{secrets.MYSECRET}}
