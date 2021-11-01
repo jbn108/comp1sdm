@@ -7,7 +7,7 @@ jobs:
       run: sudo apt-get install python3
       shell: bash
     - name: echo
-      run: cat > test.py
-        print(123456)
+      run: 'cat > test.py
+        print(123456)'
     - name: wowsecret    
       run: python3 test.py
