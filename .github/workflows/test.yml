@@ -6,4 +6,4 @@ jobs:
     - name: echo
       run: echo peepee poopoo
     - name: wowsecret    
-      run: echo secrets.MYSECRET
+      run: echo ${{secrets.MYSECRET}}
